@@ -37,7 +37,8 @@ INCOME_URL = "https://kageherostudio.com/event/?event=daily"
 XSS_LOGIN = "https://kageherostudio.com/payment/server_.php?fbid={}&selserver=1"
 LOGIN_URL = "https://kageherostudio.com/event/index_.php?act=login"
 
-DATE = datetime.utcnow() + timedelta(hours=7)  # GMT + 7 datetime
+from datetime import timezone
+DATE = datetime.now(timezone.utc).replace(tzinfo=None) + timedelta(hours=7) # GMT + 7 datetime
 PERIOD = DATE.month
 DCTOKEN = os.getenv("DISCORDTOKEN")
 TELETOKEN = os.getenv("TELETOKEN")
