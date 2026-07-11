@@ -1,0 +1,5 @@
+httpx
+py-cord
+bs4
+python-telegram-bot[job-queue]
+python-dotenv
