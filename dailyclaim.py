@@ -38,7 +38,7 @@ XSS_LOGIN = "https://kageherostudio.com/payment/server_.php?fbid={}&selserver=1"
 LOGIN_URL = "https://kageherostudio.com/event/index_.php?act=login"
 
 from datetime import timezone
-DATE = datetime.now(timezone.utc).replace(tzinfo=None) + timedelta(hours=7) # GMT + 7 datetime
+DATE = datetime.now() # GMT + 7 datetime
 PERIOD = DATE.month
 DCTOKEN = os.getenv("DISCORDTOKEN")
 TELETOKEN = os.getenv("TELETOKEN")
